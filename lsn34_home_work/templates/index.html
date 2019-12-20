@@ -2,8 +2,9 @@
 
 {% block content %}
 
-
-{#    <a href="{% url 'int_url'  %}"></a><br>#}
-{#    <a href="{% url 'str_url' %}"></a><br>#}
+{{ int_page }} <br>
+{{ str_page }} <br>
+<a href="{% url 'int_url' int_page %}">int_url</a><br>
+<a href="{% url 'str_url' str_page %}">str_url</a><br>
 
 {% endblock %}

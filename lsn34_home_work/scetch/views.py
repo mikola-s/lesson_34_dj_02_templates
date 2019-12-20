@@ -4,7 +4,12 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    int_page = 100
+    str_page = 'qwerty'
+    return render(request, 'index.html', {
+        'int_page': int_page,
+        'str_page': str_page,
+    })
 
 
 def int_url(request, page):  # , *args, **kwargs):  # , int_url_val=100):
