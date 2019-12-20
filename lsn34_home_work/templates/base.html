@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="navbar-brand" src="https://picsum.photos/40">
+</nav>
 
+<div style="margin: 30px">
+    {% block content %}
+    {% endblock %}
+</div>
 
-
-{% block content %}
-{% endblock %}
-
-<a href="{% url 'index' %}">HOME</a>
+<footer class="page-footer bg-light py-3" style="padding-left: 30px">
+    <a href="{% url 'index' %}"
+       class="footer-copyright btn btn-secondary btn-lg "
+       tabindex="-1"
+       role="button">home</a>
+</footer>
 
 </body>
 </html>
