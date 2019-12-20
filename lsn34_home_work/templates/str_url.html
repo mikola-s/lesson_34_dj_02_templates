@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    str_url {{ page }}<br>
+    {% if page|length|divisibleby:'2' %}
+        {% include 'victory.html' %}
+    {% else %}
+        {% include 'defeat.html' %}
+    {% endif %}
 {% endblock %}
